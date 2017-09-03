@@ -13,49 +13,46 @@ import java.util.List;
 @RequestMapping("/api")
 public class Controller {
 
-
     @Autowired
     IBookingRequestService bookingRequestService;
 
     @Autowired
     IMeetingService meetingService;
 
-
-    @RequestMapping(value = "/booking/all",method = RequestMethod.GET)
-    public List<BookingRequest> getAllBookingRequestsOrdered(){
+    @RequestMapping(value = "/booking/all", method = RequestMethod.GET)
+    public List<BookingRequest> getAllBookingRequestsOrdered() {
 
         return bookingRequestService.getAllOrderedByRequest();
     }
-    @RequestMapping(value = "/booking/add",method = RequestMethod.POST)
-    public BookingRequest addBookingRequest(@RequestBody BookingRequest bookingRequest){
+
+    @RequestMapping(value = "/booking/add", method = RequestMethod.POST)
+    public BookingRequest addBookingRequest(@RequestBody BookingRequest bookingRequest) {
 
         return bookingRequestService.add(bookingRequest);
     }
 
-    @RequestMapping(value = "/meeting/all",method = RequestMethod.GET)
-    public List<Meeting> getAllMeetingsOrdered(){
+    @RequestMapping(value = "/meeting/all", method = RequestMethod.GET)
+    public List<Meeting> getAllMeetingsOrdered() {
 
         return meetingService.getAllOrdered();
     }
 
-    @RequestMapping(value = "/meeting/add/request",method = RequestMethod.POST)
-    public Meeting addBookingRequestAndMeeting (@RequestBody BookingRequest bookingRequest){
+    @RequestMapping(value = "/meeting/add/request", method = RequestMethod.POST)
+    public Meeting addBookingRequestAndMeeting(@RequestBody BookingRequest bookingRequest) {
 
         bookingRequestService.add(bookingRequest);
 
         return meetingService.add(bookingRequest);
     }
 
-
-
-    @RequestMapping(value = "/meeting/add/requests/json",method = RequestMethod.POST)
-    public List<Meeting> addAllRequestsToMeetingsJson(@RequestBody List<BookingRequest> bookingRequests){
+    @RequestMapping(value = "/meeting/add/requests/json", method = RequestMethod.POST)
+    public List<Meeting> addAllRequestsToMeetingsJson(@RequestBody List<BookingRequest> bookingRequests) {
 
         return meetingService.addAllBookingRequests(bookingRequests);
     }
 
-    @RequestMapping(value = "/meeting/add/requests/db",method = RequestMethod.POST)
-    public List<Meeting> addAllRequestsToMeetingsDb(){
+    @RequestMapping(value = "/meeting/add/requests/db", method = RequestMethod.POST)
+    public List<Meeting> addAllRequestsToMeetingsDb() {
 
         return meetingService.addAllBookingRequests();
     }

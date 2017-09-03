@@ -13,10 +13,12 @@ import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;
 public class MeetingsApplication {
 	@Bean
 	public HibernateJpaSessionFactoryBean sessionFactory() {
+
 		return new HibernateJpaSessionFactoryBean();
 	}
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(MeetingsApplication.class, args);
 	}
 }

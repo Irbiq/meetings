@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface IBookingRequestService {
 
-
     BookingRequest add(BookingRequest bookingRequest);
     List<BookingRequest> getAllOrderedByRequest();
 

@@ -45,8 +45,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--hibernate-->
-		<!--mysql-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -57,50 +55,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!--<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-java8</artifactId>
-			<version>5.1.0.Final</version>
-		</dependency>-->
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-		<!--<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.2.10.Final</version>
-		</dependency>-->
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-		<!--<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.2.10.Final</version>
-		</dependency>-->
-
-	<!--	<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>4.3.8.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>4.3.8.RELEASE</version>
-		</dependency>
--->
-
-	<!--	<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-			<version>5.2.10.Final</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-ehcache</artifactId>
-			<version>5.2.10.Final</version>
-		</dependency>-->
-		<!--hibernate-->
-
 
 	</dependencies>
 
