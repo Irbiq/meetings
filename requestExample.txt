@@ -1,0 +1,13 @@
+ƒл€ отправки единичного запроса (booking request) сохранение либо только в таблицу запросов (booking_requests), либо сразу и в таблицу запросов и в таблицу встреч(meetings)
+
+{"id":0,"employee":"EMP1","requestTime":"2017-09-03 16:27:32","meetingTime":"2017-09-03 04:09:00","meetingDuration":1}
+
+ƒл€ отправки списка запросов(booking requests), которые конвертируютс€ во встречи и сохран€ютс€ только в таблицу встреч (meetings) 
+
+[{"id":0,"employee":"EMP1","requestTime":"2017-09-03 16:27:32","meetingTime":"2017-09-03 00:05:00","meetingDuration":1},
+{"id":0,"employee":"EMP1","requestTime":"2017-09-03 16:27:32","meetingTime":"2017-09-03 01:06:00","meetingDuration":1},
+{"id":0,"employee":"EMP1","requestTime":"2017-09-03 16:27:32","meetingTime":"2017-09-03 02:07:00","meetingDuration":1},
+{"id":0,"employee":"EMP1","requestTime":"2017-09-03 16:27:32","meetingTime":"2017-09-03 03:08:00","meetingDuration":1}]
+
+
+

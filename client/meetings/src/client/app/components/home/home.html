@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>#</th>
+                    <th>Id</th>
+                    <th>Employee</th>
+                    <th>Request Time</th>
+                    <th>Meeting Time</th>
+                    <th>Meeting Duration</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let req of bookingRequests, let i = index">
+                    <td>{{i}}</td>
+                    <td>{{req.id}}</td>
+                    <td>{{req.employee}}</td>
+                    <td>{{req.requestTime}}</td>
+                    <td>{{req.meetingTime}}</td>
+                    <td>{{req.meetingDuration}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <table class="table">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>#</th>
+                    <th>Id</th>
+                    <th>Employee</th>
+                    <th>Meeting Start</th>
+                    <th>Meeting End</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let meeting of meetings, let i = index">
+                    <th>{{i}}</th>
+                    <th>{{meeting.id}}</th>
+                    <th>{{meeting.employee}}</th>
+                    <th>{{meeting.start}}</th>
+                    <th>{{meeting.end}}</th>
+                </tr>
+                </tbody>
+            </table>
+            <div></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+                <textarea name="question" [(ngModel)]="bookingRequest" placeholder={{brPlaceholder}} rows="5"
+                          style="width: 100%;margin-top: 1%;margin-bottom: 1%"> </textarea>
+            <div class=" row" style="margin-left:auto">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="getAllBookingRequests()">Get all booking requests</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="addBookingRequest()">Add booking request to DB</button>
+            </div>
+        </div>
+        <div class="col">
+                <textarea name="question" [(ngModel)]="meetingRequest" placeholder={{mPlaceholder}} rows="5"
+                          style="width: 100%;margin-top: 1%;margin-bottom: 1%"> </textarea>
+            <div class=" row" style="margin-left: auto">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="getAllMeetings()">Get all meetings</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="addRequestAndMeeting()">Booking request to meetings</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="addAllBookingRequestsToMeetingsJson()">Json booking requests to meetings</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="addAllBookingRequestsToMeetingsDb()">Booking requests from DB to meetings</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
