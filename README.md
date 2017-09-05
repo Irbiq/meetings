@@ -1,17 +1,18 @@
-# meetings
-# client 
+# Meetings
+### Client 
 |command|description|
 |---|---|
 |`npm install`| Install all dependencies|
 |`npm run start`| Run client dev_server on the port: 8089|
 |`npm run build`|	Create bundled files|
 
-# server
->Runs on the port: 8080
+### Server
+* Runs on the port: 8080
 
-# Meetings API 
+***
+### Meetings API 
 
-## Adds booking request to the database table `booking_requests`  
+#### Adds booking request to the database table `booking_requests`  
 * **URL**
 
   `api/booking/add`   
@@ -28,7 +29,7 @@
     "meetingDuration": 1
 }
 ```
-## Adds booking request to the database table `booking_requests`, converts request to meeting and adds it to table `meetings` if it satisfies the conditions.  
+#### Adds booking request to the database table `booking_requests`, converts request to meeting and adds it to table `meetings` if it satisfies the conditions.  
 * **URL**
 
   `api/meeting/add/request`   
