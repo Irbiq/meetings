@@ -14,6 +14,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -53,13 +55,16 @@ public class MeetingDao implements IMeetingsDao {
     public List<Meeting> addAllBookingRequests() {
 
         List<BookingRequest> bookingRequests = bookingRequestDao.getAllOrderedByRequest();
-        return addAllBookingRequests(bookingRequests);
+        return addAllBookingRequests(bookingRequests,true);
     }
 
     @Override
     @Transactional
-    public List<Meeting> addAllBookingRequests(List<BookingRequest> bookingRequests) {
+    public List<Meeting> addAllBookingRequests(List<BookingRequest> bookingRequests, boolean isSorted) {
 
+        if(!isSorted) {
+            bookingRequests.sort(Comparator.comparing(BookingRequest::getRequestTime));
+        }
         Meeting meetingFromRequest;
         int day;
         WorkTime workTime;

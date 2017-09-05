@@ -47,8 +47,8 @@ public class Controller {
 
     @RequestMapping(value = "/meeting/add/requests/json", method = RequestMethod.POST)
     public List<Meeting> addAllRequestsToMeetingsJson(@RequestBody List<BookingRequest> bookingRequests) {
-
-        return meetingService.addAllBookingRequests(bookingRequests);
+        boolean isSorted = false;
+        return meetingService.addAllBookingRequests(bookingRequests, isSorted);
     }
 
     @RequestMapping(value = "/meeting/add/requests/db", method = RequestMethod.POST)

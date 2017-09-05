@@ -10,6 +10,6 @@ public interface IMeetingsDao {
     Meeting add(Meeting meeting);
     Meeting add(BookingRequest bookingRequest);
     List<Meeting> addAllBookingRequests();
-    List<Meeting> addAllBookingRequests(List<BookingRequest> bookingRequests);
+    List<Meeting> addAllBookingRequests(List<BookingRequest> bookingRequests,boolean sort);
     List<Meeting> getAllOrdered();
 }

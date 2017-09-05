@@ -44,8 +44,8 @@ public class MeetingService implements IMeetingService {
     }
 
     @Override
-    public List<Meeting> addAllBookingRequests(List<BookingRequest> bookingRequests) {
+    public List<Meeting> addAllBookingRequests(List<BookingRequest> bookingRequests,boolean isSorted) {
 
-        return meetingDao.addAllBookingRequests(bookingRequests);
+        return meetingDao.addAllBookingRequests(bookingRequests,isSorted);
     }
 }
