@@ -93,7 +93,7 @@
 ```
 
 
-#### Gets all booking requests ordered by request time from table `booking_requests`, converts them to meetings and adds to `meetings` table.
+#### Gets all booking requests ordered by request time from table `booking_requests`, converts them to meetings and adds to the `meetings` table.
 
 * **URL**
 
@@ -105,7 +105,7 @@
 
    `-`
 
-#### Gets all booking requests ordered by request time from table `booking_requests`
+#### Gets all booking requests ordered by request time from the table `booking_requests`
 
 * **URL**
 
@@ -115,7 +115,7 @@
   `GET`
 
 
-#### Gets all meeting ordered by start time from table `meetings`
+#### Gets all meeting ordered by start time from the table `meetings`
 
 * **URL**
 
